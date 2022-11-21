@@ -24,6 +24,6 @@ async fn notify(
 ) -> String {
     match queue.send(message.to_owned()).await {
         Ok(()) => "true".to_owned(),
-        Err(e) => "false".to_owned(),
+        Err(_e) => "false".to_owned(),
     }
 }
